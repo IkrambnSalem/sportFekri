@@ -1,0 +1,45 @@
+<app-banner title="edit match"> </app-banner>
+<p>edit-match works!</p>
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form action="#">
+         
+            <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form  #matchForm="ngForm" (ngSubmit)="editMatch()">
+         <!-- ngForm mot defenie pour angular c'est une directive pour id -->
+            <div class="form-group">
+              <!-- ngModule pour le name  -->
+              <input type="number"  name="scoreOne" [(ngModel)]="match.scoreOne" class="form-control" placeholder="score one">
+            </div>
+            <div class="form-group">
+              <input type="number" name="scoreTwo" [(ngModel)]="match.scoreTwo" class="form-control" placeholder="score two">
+            </div>
+            <div class="form-group">
+              <input type="text" name="teamOne" [(ngModel)]="match.teamOne" class="form-control" placeholder="team one">
+            </div>
+            <div class="form-group">
+              <input type="text" name="teamTwo" [(ngModel)]="match.teamTwo"  class="form-control" placeholder="team two">
+            </div>
+        
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="edit match">
+            </div>
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>
+          
+      
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>

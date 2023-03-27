@@ -1,0 +1,47 @@
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form action="#">
+  
+            <div class="site-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <form [formGroup]="weatherForm">
+  
+                      <div class="form-group">
+                        <input type="text" class="form-control" formControlName="city" placeholder="city">
+                      </div>
+                      <div *ngIf="weatherForm.controls['city'].invalid && 
+                      (weatherForm.controls['city'].touched || weatherForm.controls['city'].dirty)">
+                       <div *ngIf="weatherForm.controls['city'].errors.required" style="color:red;">
+                         City is required
+                       </div>
+                    </div>
+                      <div class="form-group mt-4" >
+                        <input type="submit" (click)="searchCity()" class="btn btn-primary py-3 px-5" value="Search">
+                      </div>
+                      <div >
+                        <h3 class="mb-4"> temperature : {{weatherResult?.temperature}} </h3>
+                        <h3 class="mb-4">pressure: {{weatherResult?.pressure }} </h3>
+                        <h3 class="mb-4">humidity: {{weatherResult?.humidity}}</h3>
+                        <h3 class="mb-4">sunrise: {{weatherResult?.sunrise*1000 | date:"hh:mm" }} </h3>
+                        <h3 class="mb-4"> sunset : {{weatherResult?.sunset*1000 | date:"hh:mm" }} </h3>
+                        <h3 class="mb-4"> icone : <img [src]="weatherResult?.icone" alt=""> </h3>
+                      
+                      </div>
+                    </form>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+  
+  
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,62 @@
+<app-banner title="Add Teams"></app-banner>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <form action="#">
+
+          <div class="site-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <form #teamForm="ngForm" (ngSubmit)="teamForm.form.valid && onSubmit(teamForm)">
+
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" class="form-control" [ngModelOptions]="{standalone: 
+                     true}" [(ngModel)]="team.name" #name="ngModel"
+                        [ngClass]="{ 'is-invalid': teamForm.submitted && name.invalid }" minlength="4" required>
+                      <div *ngIf="teamForm.submitted && name.invalid" class="invalid-feedback">
+                        <div *ngIf="name.errors.required">Name is required</div>
+                        <div *ngIf="name.errors.minlength">Name must have at least
+                          4 characters </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label> stadium</label>
+                      <input type="text" name="stadium" [(ngModel)]="team.stadium" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label> owner</label>
+                      <input type="text" name="owner" [(ngModel)]="team.owner" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Foundation</label>
+                      <input type="text" class="form-control" [ngModelOptions]="{standalone: 
+                     true}" [(ngModel)]="team.foundation" #foundation="ngModel"
+                        [ngClass]="{ 'is-invalid': teamForm.submitted && foundation.invalid }" minlength="4" required>
+                      <div *ngIf="teamForm.submitted && foundation.invalid" class="invalid-feedback">
+                        <div *ngIf="foundation.errors.required">Foundation is required</div>
+                        <div *ngIf="foundation.errors.minlength">Foundation must have at least
+                          4 characters </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-danger btn-block">Submit</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">add player</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form action="#">
+         
+            <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #playerForm="ngForm" (ngSubmit)="addPlayer()">
+         
+            <div class="form-group">
+              <input type="text" name="Name" [(ngModel)]="player.Name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="number" name="age" [(ngModel)]="player.age" class="form-control" placeholder="age">
+            </div>
+            <div class="form-group">
+              <input type="number" name="position" [(ngModel)]="player.position" class="form-control" placeholder="position">
+            </div>
+            <div class="form-group">
+              <input type="number" name="nbr" [(ngModel)]="player.nbr" class="form-control" placeholder="nbr">
+            </div>
+        
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="add player">
+            </div>
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>
+          
+      
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>

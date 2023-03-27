@@ -1,0 +1,17 @@
+<div class="container site-section">
+    <div class="row">
+      <div class="col-6 title-section">
+        <h2 class="heading">Our Blog</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let m of blogTable" class="col-lg-6">
+
+        <app-article [articleInput]="m"></app-article>
+        
+        </div>
+    </div>
+  </div>
+
+
+

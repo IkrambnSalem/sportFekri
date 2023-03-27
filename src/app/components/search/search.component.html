@@ -1,0 +1,38 @@
+<app-banner title="search match"></app-banner>
+<div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form action="#">
+         
+            <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form  #matchForm="ngForm" (ngSubmit)="searchMatch()">
+         <!-- ngForm mot defenie pour angular c'est une directive pour id -->
+            <div class="form-group">
+              <!-- ngModule pour le name  -->
+              <input type="number"  name="scoreOne" [(ngModel)]="match.scoreOne" class="form-control" placeholder="score one">
+            </div>
+            <div class="form-group">
+              <input type="number" name="scoreTwo" [(ngModel)]="match.scoreTwo" class="form-control" placeholder="score two">
+            </div>
+            
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="search">
+            </div>
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>
+          
+      
+          </form>  
+        </div>
+     
+      </div>
+    </div>
+  </div>
